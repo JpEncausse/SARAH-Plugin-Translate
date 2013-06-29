@@ -1,0 +1,16 @@
+<grammar version="1.0" xml:lang="fr-FR" mode="voice" root="lazyTranslate" xmlns="http://www.w3.org/2001/06/grammar" tag-format="semantics/1.0">
+  <rule id="lazyTranslate" scope="public">
+    <tag>out.action=new Object(); </tag>
+	  <one-of>
+		  <item>
+        C'est bon merci
+			  <tag>
+          out.action._attributes.context = "default";
+			    out.action._attributes.tts = "bonne continuation";
+        </tag>
+		  </item>
+		  <item><ruleref special="GARBAGE" /><tag>out.action._attributes.dictation="en-GB";</tag></item>
+	  </one-of>
+    <tag>out.action._attributes.uri="http://127.0.0.1:8080/sarah/translate";</tag>
+  </rule>
+</grammar>

@@ -1,0 +1,8 @@
+{
+  "modules" : { 
+    "translate"  : {
+      "description": "EN Speech => Microsoft => Google (EN) => Translate EN-FR => TTS FR",
+      "version"    : "0.5"
+    }
+  }
+}

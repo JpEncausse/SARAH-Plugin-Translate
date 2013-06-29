@@ -1,0 +1,17 @@
+<grammar version="1.0" xml:lang="fr-FR" mode="voice" root="ruleTranslate" xmlns="http://www.w3.org/2001/06/grammar" tag-format="semantics/1.0">
+  <rule id="ruleTranslate" scope="public">
+	  <example>SARAH tu peux traduire</example>
+    <tag>out.action=new Object();</tag>
+    <item>SARAH</item>
+    <one-of>
+      <item>tu peux traduire</item>
+      <item>peux tu traduire</item>
+      <item>tu peux faire la traduction</item>
+      <item>peux tu faire la traduction</item>
+    </one-of>
+    <tag>
+      out.action._attributes.context = "lazyTranslate.xml";
+      out.action._attributes.tts = "Oui, je t'écoute."
+    </tag>
+  </rule>
+</grammar>
